@@ -1,0 +1,289 @@
+[
+  {
+    "title": "Offline applications with Service Worker",
+    "event": {
+      "name": "Devfest Lima 2016",
+      "url": "https://devfest.pe/schedule/day1?sessionId=142"
+    },
+    "date": "05/08/2016",
+    "description": "With a Service Worker we can make any app work offline, we just need to set it up, select the files to cache and pick a caching strategy. We'll create an app following those steps.",
+    "location": {
+        "placeName": "Universidad Inca Garcilaso de la Vega",
+        "geographical": {
+          "city": "Lima",
+          "country": "Perú"
+        },
+      "coords": {
+        "lat": "-12.070966",
+        "lng": "-77.073681"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://docs.google.com/presentation/d/1DDvtkJ5sN4UydTY2bYWLJp1fVPU5sXUrUiou1jnZu0w"
+      },
+      {
+        "name": "repo",
+        "url": "https://bitbucket.org/unjavascripter/dota-items_client/"
+      },
+      {
+        "name": "repo",
+        "url": "https://bitbucket.org/unjavascripter/dota-items_server/"
+      }
+    ]
+  },
+  {
+    "title": "Progressive Web Apps (PWA)",
+    "event": {
+      "name": "Google Launchpad - Bogotá",
+      "url": "https://developers.google.com/startups/"
+    },
+    "date": "05/08/2016",
+    "description": "Progressive Web Applications offer an app-like experience by providing content to the user even without an active internet connection. The user can \"install\" them on their mobile device's desktop and have things like a splash screen on loading, a themed native UI, no browser navigation bar (optional),receive push notifications, and so forth. All that using JavaScript.",
+    "location": {
+        "placeName": "Cámara de Comercio de Bogotá - CCB",
+        "geographical": {
+          "city": "Bogotá",
+          "country": "Colombia"
+        },
+      "coords": {
+        "lat": "4.654516",
+        "lng": "-74.083022"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://drive.google.com/open?id=1pbD4h1rx5Kv2XPVWWd_lc39oLYxijvC9qAq_6vnCsGk"
+      }
+    ]
+  },
+  {
+    "title": "Auto Scalable Applications",
+    "event": {
+      "name": "Google Launchpad - Bogotá",
+      "url": "https://developers.google.com/startups/"
+    },
+    "date": "05/08/2016",
+    "description": "Modern apps should be able to handle requests from one user to thousands of users at a single time without breaking. You may need more processing power (servers) for a thousand users making requests, but just a little bit for 200 users, auto scaling makes it easier for you to handle all of your users requests and keeps it cheaper by using only what is needed.",
+    "location": {
+        "placeName": "Cámara de Comercio de Bogotá - CCB",
+        "geographical": {
+          "city": "Bogotá",
+          "country": "Colombia"
+        },
+      "coords": {
+        "lat": "4.654516",
+        "lng": "-74.083022"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://drive.google.com/open?id=1-tb2QEQ8bre-h4hyoRlggyG1ftoirrJYyRJ3kAzaD9A"
+      }
+    ]
+  },
+
+  {
+    "title": "Progressive Aeb Apps (PWA)",
+    "event": {
+      "name": "Google Launchpad - Bogotá",
+      "url": "https://developers.google.com/startups/"
+    },
+    "date": "15/07/2016",
+    "description": "Progressive Web Applications offer an app-like experience by providing content to the user even without an active internet connection. The user can \"install\" them on their mobile device's desktop and have things like a splash screen on loading, a themed native UI, no browser navigation bar (optional),receive push notifications, and so forth. All that using JavaScript.",
+    "location": {
+        "placeName": "Ministerio de Tecnologías de la Información y Comunicaciones - MINTIC",
+        "geographical": {
+          "city": "Bogotá",
+          "country": "Colombia"
+        },
+      "coords": {
+        "lat": "4.654516",
+        "lng": "-74.083022"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://drive.google.com/open?id=1pbD4h1rx5Kv2XPVWWd_lc39oLYxijvC9qAq_6vnCsGk"
+      }
+    ]
+  },
+
+  {
+    "title": "Angular 1.x - Components & Firebase",
+    "event": {
+      "name": "AngularJS Colombia - Meetup",
+      "url": "https://www.meetup.com/AngularJS-Colombia/events/231721443/"
+    },
+    "date": "30/06/2016",
+    "description": "Angular 1.5 came with the concept of components where you can encapsulate logic even more easily, lets try them out using Angular Fire, the AngularJS interface for Firebase.",
+    "location": {
+      "placeName": "Atom House",
+      "geographical": {
+        "city": "Bogotá",
+        "country": "Colombia"
+      },
+      "coords": {
+        "lat": "4.6519711",
+        "lng": "-74.0570907"
+      }
+    },
+    "resources": [
+      {
+        "name": "repo",
+        "url": "https://github.com/UnJavaScripter/angular1.5-components-demo"
+      }
+    ]
+  },
+
+  {
+    "title": "Firebase for web applications",
+    "event": {
+      "name": "Google Developers Group Bogotá - Meetup",
+      "url": "https://www.meetup.com/gdgbogota/events/231721634/"
+    },
+    "date": "23/06/2016",
+    "description": "Firebase allows us to create fast and performant applications that can store/read data in real time without setting up a server, just a couple of lines in our client. We'll explore the Firebase web SDKs and create a sample app.",
+    "location": {
+      "placeName": "Atom House",
+      "geographical": {
+        "city": "Bogotá",
+        "country": "Colombia"
+      },
+      "coords": {
+        "lat": "4.6519711",
+        "lng": "-74.0570907"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "http://slides.com/diegocoy/deck"
+      },
+      {
+        "name": "repo",
+        "url": "https://github.com/UnJavaScripter/fishackathon-2016"
+      }
+    ]
+  },
+
+  {
+    "title": "Typescript introduction",
+    "event": {
+      "name": "AngularJS Colombia - Meetup",
+      "url": "https://www.meetup.com/AngularJS-Colombia/events/231042868/"
+    },
+    "date": "25/05/2016",
+    "description": "Angular 2 is built on TypeScript, a superset of JavaScript. It includes several features available in ES6/ES2015 and some new cool things that we will use on a sample app.",
+    "location": {
+      "placeName": "Atom House",
+      "geographical": {
+        "city": "Bogotá",
+        "country": "Colombia"
+      },
+      "coords": {
+        "lat": "4.6519711",
+        "lng": "-74.0570907"
+      }
+    },
+    "resources": [
+      {
+        "name": "repo",
+        "url": "https://github.com/UnJavaScripter/typescript-basics"
+      }
+    ]
+  },
+
+  {
+    "title": "Rapid Web Prototyping",
+    "event": {
+      "name": "Fishackathon - #codeForFish",
+      "url": "http://www.utadeo.edu.co/es/evento/academicos/fishackathon-2016-ideas-tecnologicas-en-pro-de-la-pesca-sostenible/home/1"
+    },
+    "date": "25/05/2016",
+    "description": "During hackatons what matters the most is getting a Minimum Viable Product as soon as possible, taking advantage of the tools available out there (in the interwebs) will help you work smarter by providing you a boilerplate you can use right away, so you can focus on your idea/product.",
+    "location": {
+      "placeName": "Universidad Jorge Tadeo Lozano - Bogotá",
+      "geographical": {
+        "city": "Bogotá",
+        "country": "Colombia"
+      },
+      "coords": {
+        "lat": "4.6519711",
+        "lng": "-74.0570907"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://github.com/UnJavaScripter/typescript-basics"
+      }
+    ]
+  },
+
+  {
+    "title": "Angular2 - a gentle introduction",
+    "event": {
+      "name": "DevDay - Bogotá",
+      "url": "https://www.ticketcode.co/eventos/dev-day"
+    },
+    "date": "27/02/2016",
+    "description": "Angular 2 is the new version of the popular framework we love. Sadly (?) for us, Angular 1.x devs, it changed everything. Almost all the things we used to know, love or hate are gone so we need to take a step back and start thinking about our app development using a different paradigm.",
+    "location": {
+      "placeName": "Microsoft Colombia",
+      "geographical": {
+        "city": "Bogotá",
+        "country": "Colombia"
+      },
+      "coords": {
+        "lat": "4.654633",
+        "lng": "-74.056058"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "http://slides.com/diegocoy/angular-2-intro"
+      },
+      {
+        "name": "repo",
+        "url": "https://github.com/UnJavaScripter/listaDeCosasPorHacer-angular2"
+      }
+    ]
+  },
+
+  {
+    "title": "Angular2 a practical introduction",
+    "event": {
+      "name": "DevDay - Bogotá",
+      "url": "https://www.meetup.com/AngularJS-Colombia/events/227863136/"
+    },
+    "date": "27/02/2016",
+    "description": "Angular 2 is the new version of the popular framework we love. Sadly (?) for us, Angular 1.x devs, it changed everything. Almost all the things we used to know, love or hate are gone so we need to take a step back and start thinking about our app development using a different paradigm.",
+    "location": {
+      "placeName": "Atom House",
+      "geographical": {
+        "city": "Bogotá",
+        "country": "Colombia"
+      },
+      "coords": {
+        "lat": "4.6519711",
+        "lng": "-74.0570907"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "http://slides.com/diegocoy/angular-2-intro"
+      },
+      {
+        "name": "repo",
+        "url": "https://github.com/UnJavaScripter/listaDeCosasPorHacer-angular2"
+      }
+    ]
+  }
+]

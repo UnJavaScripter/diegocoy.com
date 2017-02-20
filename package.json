@@ -1,0 +1,31 @@
+{
+  "name": "diegocoy.com",
+  "version": "1.0.0",
+  "description": "A demo/personal web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc -p . && tsc -p src -w",
+    "stylus": "stylus -u autoprefixer-stylus -c ./src/styl/main.styl -o ./public/stylesheets/main.css -w"
+  },
+  "author": "UnJavaScripter",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "handlebars": "^4.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.46",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-inject": "^4.2.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^2.0.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-typescript": "^3.1.5",
+    "typescript": "^2.1.6"
+  }
+}

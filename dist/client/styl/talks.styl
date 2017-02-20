@@ -1,0 +1,53 @@
+main>section.talks-container
+  transform translateY(5%)
+
+  & a
+    color #090a41
+
+    &:visited
+      color #8294a9
+    
+  & .card.talk-card
+    display flex
+    margin-bottom 1.5rem
+    margin 1rem
+    padding-top 1.5rem
+    padding-right 2rem
+    padding-bottom 1.5rem
+    padding-left 2rem 
+    min-width auto
+    max-width 75%
+
+    @media screen and (max-width 600px)
+      flex-direction column
+
+    &>.content
+      display flex
+      width 80%
+      flex-direction column
+
+      @media screen and (max-width 600px)
+        width auto!important
+      
+
+      &>.talk-date
+        color #7d7d7d
+
+    &>.location
+      width 20%
+      display flex
+      flex-direction column
+      color #7d7d7d
+      
+      @media screen and (max-width 600px)
+        width auto!important
+
+      &>.event
+        margin-bottom 1rem
+
+      &>.place-geo
+        align-items flex-end
+        display flex
+        flex 1
+.zz 
+  transform-origin center center

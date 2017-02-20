@@ -1,0 +1,38 @@
+<%- include('../_includes/_head.html') %>
+<%- include('../_includes/_header.html') %>
+
+<main class="talks">
+  <section class="talks-container">
+    <% for(var i=0; i<talks.length; i++) { %>
+      <div class="card talk-card">
+        
+        <div class="content">
+          <div class="talk-date"><%= talks[i].date %></div>
+          <h2 class="talk-title"><%= talks[i].title %></h2>
+          <p class="talk-description"><%= talks[i].description %></p>
+          <ul class="resources">
+            <% for(var j=0; j < talks[i].resources.length; j++) { %>
+              <li><a href="<%= talks[i].resources[j].url %>"><%= talks[i].resources[j].name %></a></li>
+            <% } %>
+          </ul>
+        </div>
+        <div class="location">
+          <div class="event">
+            <b>
+              <% if (talks[i].event.url) { %>
+                <a href="<%= talks[i].event.url %>"><%= talks[i].event.name %></a>
+              <% } else { %>
+                  <%= talks.event.name %>
+              <% } %>
+            </b>
+          </div>
+          <div class="place-name"><%= talks[i].location.placeName %></div>
+          <div class="place-geo"><%= talks[i].location.geographical.city %>, <%= talks[i].location.geographical.country %></div>
+        </div>
+
+      </div>
+    <% } %>
+  </section>
+</main>
+
+<%- include('../_includes/_scripts.html') %>
