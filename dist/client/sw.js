@@ -36,15 +36,22 @@ self.addEventListener('activate', function (event) {
     }));
 });
 self.addEventListener('fetch', function (event) {
-    event.respondWith(caches.open(CACHE_ACTUAL).then(function (cache) {
-        if (event.request.method === 'GET') {
-            return cache.match(event.request).then(function (elementoCacheado) {
-                var elementoDeLaRed = fetch(event.request).then(function (respuestaDeLaRed) {
-                    cache.put(event.request, respuestaDeLaRed.clone());
-                    return respuestaDeLaRed;
-                });
-                return elementoCacheado || elementoDeLaRed;
-            });
+    event.respondWith(caches.match(event.request)
+        .then(function (respuestaEnCache) {
+        var laSolicitud = event.request.clone();
+        if (respuestaEnCache || !(/(google-analytics.com)|(fonts.googleapis.com)/gi).test(laSolicitud.url)) {
+            return respuestaEnCache;
         }
+        return fetch(laSolicitud).then(function (respuestaDeLaRed) {
+            if (!respuestaDeLaRed || respuestaDeLaRed.status !== 200 || respuestaDeLaRed.type !== 'basic') {
+                return respuestaDeLaRed;
+            }
+            var respuestaDeLaRedParaCachear = respuestaDeLaRed.clone();
+            caches.open(CACHE_ACTUAL)
+                .then(function (cache) {
+                cache.put(event.request, respuestaDeLaRedParaCachear);
+            });
+            return respuestaDeLaRed;
+        });
     }));
 });

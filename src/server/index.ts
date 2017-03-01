@@ -20,7 +20,6 @@ class Server {
     });
 
     app.get("/", (req, res) => {
-      console.log(express.static);
       res.render("main");
     });
     
@@ -34,6 +33,7 @@ class Server {
 
     app.listen(3000, _ => console.log("API running on port 3000"));
   }
+  
 }
 
 

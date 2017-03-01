@@ -38,7 +38,7 @@ function tsSw () {
 }
 
 function moveClient() {
-  return gulp.src('./src/client/**/*')
+  return gulp.src(['./src/client/**/*', '!./src/client/ts', '!./src/client/**/*.ts'])
     .pipe(
       gulp.dest('./dist/client')
     )
@@ -113,9 +113,11 @@ gulp.task('server', ['move-server', 'server-ts'])
 
 
 gulp.task('watch', function() {
-  gulp.watch('./src/client/ts/*.ts', ['client-ts']);
-  gulp.watch('./src/client/sw.ts', ['ts-sw']);
-  gulp.watch('./src/client/styl/*.styl', ['stylus']);
+  gulp.watch([
+    './src/client/ts/*.ts', 
+    './src/client/sw.ts', 
+    './src/client/styl/*.styl'
+  ], ['client']);
   
   gulp.watch('./src/server/**/*', ['server']);
 });

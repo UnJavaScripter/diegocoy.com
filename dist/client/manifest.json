@@ -12,5 +12,6 @@
   "orientation": "portrait",
   "theme_color": "#1f354a",
   "background_color": "#1f354a",
-  "start_url": "./index.html?o=i"
+  "start_url": "./index.html?o=i",
+  "gcm_sender_id": "749615278563"
 }

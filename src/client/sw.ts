@@ -30,10 +30,10 @@ const archivos_para_cachear = [
   '/scripts/sw_registration.js'
 ];
 
-self.addEventListener('install', function(event: any) {
+self.addEventListener('install', (event: any) => {
   event.waitUntil(
     caches.open(CACHE_ACTUAL)
-      .then(function(cache) {
+      .then((cache) => {
         return cache.addAll(archivos_para_cachear).then(() => {
           console.log('Archivos cacheados');
         });
@@ -63,18 +63,30 @@ self.addEventListener('activate', (event: any) => {
 
 self.addEventListener('fetch', (event: any) => {
   event.respondWith(
-    caches.open(CACHE_ACTUAL).then(cache => {
-      if(event.request.method === 'GET') {
+    caches.match(event.request)
+      .then((respuestaEnCache) => {
+        const laSolicitud = event.request.clone();
 
-        return cache.match(event.request).then(elementoCacheado => {
-          const elementoDeLaRed = fetch(event.request).then(respuestaDeLaRed => {
-            cache.put(event.request, respuestaDeLaRed.clone());
+        if(respuestaEnCache || !(/(google-analytics.com)|(fonts.googleapis.com)/gi).test(laSolicitud.url) ) {
+          return respuestaEnCache;
+        }
+
+        return fetch(laSolicitud).then((respuestaDeLaRed) => {
+
+            if(!respuestaDeLaRed || respuestaDeLaRed.status !== 200 || respuestaDeLaRed.type !== 'basic') {
+              return respuestaDeLaRed;
+            }
+
+            const respuestaDeLaRedParaCachear = respuestaDeLaRed.clone();
+
+            caches.open(CACHE_ACTUAL)
+              .then((cache) => {
+                cache.put(event.request, respuestaDeLaRedParaCachear);
+              });
+
             return respuestaDeLaRed;
-          })
-          return elementoCacheado || elementoDeLaRed;
-        })
-
-      }
-    })
-  );
+          }
+        );
+      })
+    );
 });

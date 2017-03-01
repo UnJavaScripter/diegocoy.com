@@ -14,7 +14,6 @@ var Server = (function () {
             next();
         });
         app.get("/", function (req, res) {
-            console.log(express.static);
             res.render("main");
         });
         app.get("/talks", function (req, res) {
