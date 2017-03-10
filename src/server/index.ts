@@ -20,7 +20,7 @@ class Server {
     });
 
     app.get("/", (req, res) => {
-      res.render("main");
+      res.render("main", {config: {email: 'diegocoyt@gmail.com'}});
     });
     
     app.get("/talks", (req, res) => {

@@ -60,7 +60,7 @@
 
 <script>
   setTimeout(_ => {
-    const myEmail = 'diegocoyt@gmail.com';
+    const myEmail = '<%= config.email %>';
     writeEmailAddress('.dynamic-email', myEmail);
     dynamicEmailLink('.email-link', myEmail);
   }, 300);

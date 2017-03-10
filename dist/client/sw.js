@@ -15,6 +15,7 @@ var archivos_para_cachear = [
     '/scripts/index.js',
     '/scripts/sw_registration.js'
 ];
+// Instalación del service worker y cacheo inicial
 self.addEventListener('install', function (event) {
     event.waitUntil(caches.open(CACHE_ACTUAL)
         .then(function (cache) {
@@ -23,6 +24,7 @@ self.addEventListener('install', function (event) {
         });
     }));
 });
+// El service worker actual tomó control
 self.addEventListener('activate', function (event) {
     event.waitUntil(self.clients.claim());
     event.waitUntil(caches.keys().then(function (lasCachesQueExisten) {
@@ -35,6 +37,7 @@ self.addEventListener('activate', function (event) {
         }));
     }));
 });
+// Interceptor de solicitudes
 self.addEventListener('fetch', function (event) {
     event.respondWith(caches.match(event.request)
         .then(function (respuestaEnCache) {
@@ -53,5 +56,17 @@ self.addEventListener('fetch', function (event) {
             });
             return respuestaDeLaRed;
         });
+    }));
+});
+// Notificaciones Push
+self.addEventListener('push', function (event) {
+    var title = 'Jojojo';
+    var body = '¡Un mensaje Push ha llegado!';
+    var icon = '/apple-touch-icon.png';
+    var tag = 'jojojojojo-push-tag';
+    event.waitUntil(self.registration.showNotification(title, {
+        body: body,
+        icon: icon,
+        tag: tag
     }));
 });

@@ -1,10 +1,8 @@
-declare let caches: any;
-declare let fetch: any;
-declare let Promise: any;
-
 interface Window {
   skipWaiting: any;
   clients: any;
+  registration: any;
+  Notification: any;
 }
 
 const CACHE_ACTUAL = 'cache0';
@@ -30,6 +28,7 @@ const archivos_para_cachear = [
   '/scripts/sw_registration.js'
 ];
 
+// Instalación del service worker y cacheo inicial
 self.addEventListener('install', (event: any) => {
   event.waitUntil(
     caches.open(CACHE_ACTUAL)
@@ -41,6 +40,7 @@ self.addEventListener('install', (event: any) => {
   );
 });
 
+// El service worker actual tomó control
 self.addEventListener('activate', (event: any) => {
   event.waitUntil(self.clients.claim());
 
@@ -61,6 +61,8 @@ self.addEventListener('activate', (event: any) => {
   );
 });
 
+
+// Interceptor de solicitudes
 self.addEventListener('fetch', (event: any) => {
   event.respondWith(
     caches.match(event.request)
@@ -89,4 +91,20 @@ self.addEventListener('fetch', (event: any) => {
         );
       })
     );
+});
+
+// Notificaciones Push
+self.addEventListener('push', function(event: any) {  
+  var title = 'Jojojo';  
+  var body = '¡Un mensaje Push ha llegado!';  
+  var icon = '/apple-touch-icon.png';  
+  var tag = 'jojojojojo-push-tag';
+
+  event.waitUntil(  
+    self.registration.showNotification(title, {  
+      body: body,  
+      icon: icon,  
+      tag: tag  
+    })  
+  );  
 });

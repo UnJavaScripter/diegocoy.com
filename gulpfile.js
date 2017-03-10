@@ -112,10 +112,9 @@ gulp.task('server', ['move-server', 'server-ts'])
 
 
 
-gulp.task('watch', function() {
+gulp.task('watch', ['server', 'client'], function() {
   gulp.watch([
-    './src/client/ts/*.ts', 
-    './src/client/sw.ts', 
+    './src/client/**/*.ts', 
     './src/client/styl/*.styl'
   ], ['client']);
   

@@ -14,7 +14,7 @@ var Server = (function () {
             next();
         });
         app.get("/", function (req, res) {
-            res.render("main");
+            res.render("main", { config: { email: 'diegocoyt@gmail.com' } });
         });
         app.get("/talks", function (req, res) {
             res.render("talks", { talks: require('./talks.json') });
