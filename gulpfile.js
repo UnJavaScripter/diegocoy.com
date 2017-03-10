@@ -114,6 +114,7 @@ gulp.task('server', ['move-server', 'server-ts'])
 
 gulp.task('watch', ['server', 'client'], function() {
   gulp.watch([
+    './tsconfig.json',
     './src/client/**/*.ts', 
     './src/client/styl/*.styl'
   ], ['client']);
