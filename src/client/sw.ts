@@ -5,7 +5,7 @@ interface Window {
   Notification: any;
 }
 
-const CACHE_ACTUAL = 'cache0';
+const CACHE_ACTUAL = 'cache1';
 const archivos_para_cachear = [
   '/',
   '/?o=i',
@@ -69,13 +69,13 @@ self.addEventListener('fetch', (event: any) => {
       .then((respuestaEnCache) => {
         const laSolicitud = event.request.clone();
 
-        if(respuestaEnCache || !(/(google-analytics.com)|(fonts.googleapis.com)/gi).test(laSolicitud.url) ) {
-          return respuestaEnCache;
-        }
-
         return fetch(laSolicitud).then((respuestaDeLaRed) => {
 
-            if(!respuestaDeLaRed || respuestaDeLaRed.status !== 200 || respuestaDeLaRed.type !== 'basic') {
+            if(!respuestaDeLaRed
+              || respuestaDeLaRed.status !== 200 
+              || respuestaDeLaRed.type !== 'basic'
+              || (/(google-analytics.com)|(fonts.googleapis.com)/gi).test(laSolicitud.url)
+            ){
               return respuestaDeLaRed;
             }
 
@@ -88,7 +88,9 @@ self.addEventListener('fetch', (event: any) => {
 
             return respuestaDeLaRed;
           }
-        );
+        ).catch(err => {
+          return respuestaEnCache;
+        });
       })
     );
 });

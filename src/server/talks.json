@@ -1,5 +1,83 @@
 [
   {
+    "title": "Angular 1, 2, 3, 4, 5? It's just Angular",
+    "event": {
+      "name": "Angular Colombia - Meetup",
+      "url": "https://www.meetup.com/Angular-Colombia/events/236809109/"
+    },
+    "date": "01/28/2017",
+    "description": "Confused about the new releases? Can't keep up with all the changes? Don't worry it really is JUST Angular",
+    "location": {
+        "placeName": "Microsoft Colombia",
+        "geographical": {
+          "city": "Bogotá",
+          "country": "Colombia"
+        },
+      "coords": {
+        "lat": "4.6568858",
+        "lng": "-74.0562974"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://drive.google.com/open?id=1A5PB76A5JoyFvYZOFUXfsbzhti3sJoB90OUXvlSaCJk"
+      }
+    ]
+  },
+  {
+    "title": "Progressive Web Apps (PWA)",
+    "event": {
+      "name": "DevFest Bogotá 2016",
+      "url": "https://devfest.co/"
+    },
+    "date": "05/11/2016",
+    "description": "Progressive Web Applications offer an app-like experience by providing content to the user even without an active internet connection. The user can \"install\" them on their mobile device's desktop and have things like a splash screen on loading, a themed native UI, no browser navigation bar (optional),receive push notifications, and so forth. All that using JavaScript.",
+    "location": {
+        "placeName": "Universidad Santo Tomás",
+        "geographical": {
+          "city": "Bogotá",
+          "country": "Colombia"
+        },
+      "coords": {
+        "lat": "4.6568859",
+        "lng": "-74.0562974"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://docs.google.com/presentation/d/1DDvtkJ5sN4UydTY2bYWLJp1fVPU5sXUrUiou1jnZu0w"
+      }
+    ]
+  },
+  {
+    "title": "Progressive Web Apps (PWA)",
+    "event": {
+      "name": "Google Launchpad - Bogotá",
+      "url": "https://developers.google.com/startups/"
+    },
+    "date": "04/11/2016",
+    "description": "Progressive Web Applications offer an app-like experience by providing content to the user even without an active internet connection. The user can \"install\" them on their mobile device's desktop and have things like a splash screen on loading, a themed native UI, no browser navigation bar (optional),receive push notifications, and so forth. All that using JavaScript.",
+    "location": {
+        "placeName": "Cámara de Comercio de Bogotá - CCB",
+        "geographical": {
+          "city": "Bogotá",
+          "country": "Colombia"
+        },
+      "coords": {
+        "lat": "4.654516",
+        "lng": "-74.083022"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://drive.google.com/open?id=1pbD4h1rx5Kv2XPVWWd_lc39oLYxijvC9qAq_6vnCsGk"
+      }
+    ]
+  },
+  {
     "title": "Offline applications with Service Worker",
     "event": {
       "name": "Devfest Lima 2016",

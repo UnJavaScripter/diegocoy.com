@@ -308,6 +308,8 @@ main>section.index-container>.card.me-card>.content-area>.social-links-container
 }
 main>section.index-container>.card.me-card>.content-area>.social-links-container>a.social-link>[class^="icon-"] {
   font-size: 3.5rem;
+  -webkit-transition: color 0.35s ease;
+  transition: color 0.35s ease;
 }
 main>section.index-container>.card.me-card>.content-area>.social-links-container>a.social-link:hover {
   cursor: pointer;
@@ -315,11 +317,14 @@ main>section.index-container>.card.me-card>.content-area>.social-links-container
 main>section.index-container>.card.me-card>.content-area>.social-links-container>a.social-link:hover>.icon-twitter {
   color: #1da1f2;
 }
-main>section.index-container>.card.me-card>.content-area>.social-links-container>a.social-link:hover>.icon-linkedin {
-  color: #1583bb;
+main>section.index-container>.card.me-card>.content-area>.social-links-container>a.social-link:hover>.icon-facebook2 {
+  color: #3b5998;
 }
 main>section.index-container>.card.me-card>.content-area>.social-links-container>a.social-link:hover>.icon-github {
   color: #333;
+}
+main>section.index-container>.card.me-card>.content-area>.social-links-container>a.social-link:hover>.icon-linkedin {
+  color: #1583bb;
 }
 main>section.index-container>.card.me-card>.content-area>.social-links-container>a.social-link:hover>.icon-youtube {
   color: #cc181e;
@@ -368,7 +373,7 @@ main>section.talks-container .card.talk-card {
   padding-right: 2rem;
   padding-bottom: 1.5rem;
   padding-left: 2rem;
-  min-width: auto;
+  min-width: 75%;
   max-width: 75%;
 }
 @media screen and (max-width: 600px) {

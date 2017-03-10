@@ -1,4 +1,4 @@
-var CACHE_ACTUAL = 'cache0';
+var CACHE_ACTUAL = 'cache1';
 var archivos_para_cachear = [
     '/',
     '/?o=i',
@@ -42,11 +42,11 @@ self.addEventListener('fetch', function (event) {
     event.respondWith(caches.match(event.request)
         .then(function (respuestaEnCache) {
         var laSolicitud = event.request.clone();
-        if (respuestaEnCache || !(/(google-analytics.com)|(fonts.googleapis.com)/gi).test(laSolicitud.url)) {
-            return respuestaEnCache;
-        }
         return fetch(laSolicitud).then(function (respuestaDeLaRed) {
-            if (!respuestaDeLaRed || respuestaDeLaRed.status !== 200 || respuestaDeLaRed.type !== 'basic') {
+            if (!respuestaDeLaRed
+                || respuestaDeLaRed.status !== 200
+                || respuestaDeLaRed.type !== 'basic'
+                || (/(google-analytics.com)|(fonts.googleapis.com)/gi).test(laSolicitud.url)) {
                 return respuestaDeLaRed;
             }
             var respuestaDeLaRedParaCachear = respuestaDeLaRed.clone();
@@ -55,6 +55,8 @@ self.addEventListener('fetch', function (event) {
                 cache.put(event.request, respuestaDeLaRedParaCachear);
             });
             return respuestaDeLaRed;
+        })["catch"](function (err) {
+            return respuestaEnCache;
         });
     }));
 });
