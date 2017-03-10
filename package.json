@@ -26,6 +26,6 @@
     "gulp-print": "^2.0.1",
     "gulp-stylus": "^2.6.0",
     "gulp-typescript": "^3.1.5",
-    "typescript": "^2.1.5"
+    "typescript": "^2.2.1"
   }
 }

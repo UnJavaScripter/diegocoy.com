@@ -22,7 +22,9 @@ function stylus () {
 
 function clientTs() {
   return gulp.src('./src/client/ts/*.ts')
-    .pipe($.typescript({}))
+    .pipe($.typescript({
+      noImplicitAny: true
+    }))
     .pipe(
       gulp.dest('./dist/client/scripts')
     )
@@ -38,7 +40,7 @@ function tsSw () {
 }
 
 function moveClient() {
-  return gulp.src(['./src/client/**/*', '!./src/client/ts', '!./src/client/**/*.ts'])
+  return gulp.src(['./src/client/**/*', '!./src/client/ts', '!./src/client/styl', '!./src/client/styl/**', '!./src/client/**/*.ts'])
     .pipe(
       gulp.dest('./dist/client')
     )
@@ -114,6 +116,7 @@ gulp.task('server', ['move-server', 'server-ts'])
 
 gulp.task('watch', ['server', 'client'], function() {
   gulp.watch([
+    './gulpfile.js',
     './tsconfig.json',
     './src/client/**/*.ts', 
     './src/client/styl/*.styl'
