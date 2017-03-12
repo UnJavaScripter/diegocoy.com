@@ -119,10 +119,12 @@ gulp.task('watch', ['server', 'client'], function() {
     './gulpfile.js',
     './tsconfig.json',
     './src/client/**/*.ts', 
-    './src/client/styl/*.styl'
+    './src/client/styl/*.styl',
+    './src/client/manifest.json'
   ], ['client']);
   
   gulp.watch('./src/server/**/*', ['server']);
+  console.log('Waiting for changes...');
 });
 
 gulp.task('default', ['client', 'server']);

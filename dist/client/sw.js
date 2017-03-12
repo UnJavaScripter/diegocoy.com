@@ -1,4 +1,4 @@
-var CACHE_ACTUAL = 'cache1';
+var CACHE_ACTUAL = 'cache012';
 var archivos_para_cachear = [
     '/',
     '/?o=i',
@@ -13,6 +13,7 @@ var archivos_para_cachear = [
     '/fonts/icomoon.ttf',
     '/fonts/icomoon.woff',
     '/scripts/index.js',
+    '/scripts/main.js',
     '/scripts/sw_registration.js'
 ];
 // Instalación del service worker y cacheo inicial
@@ -22,7 +23,8 @@ self.addEventListener('install', function (event) {
         return cache.addAll(archivos_para_cachear).then(function () {
             console.log('Archivos cacheados');
         });
-    }));
+    })
+        .then(function (_) { return self.skipWaiting(); }));
 });
 // El service worker actual tomó control
 self.addEventListener('activate', function (event) {

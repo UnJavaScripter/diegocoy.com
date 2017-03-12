@@ -5,7 +5,7 @@ interface Window {
   Notification: any;
 }
 
-const CACHE_ACTUAL = 'cache1';
+const CACHE_ACTUAL = 'cache012';
 const archivos_para_cachear = [
   '/',
   '/?o=i',
@@ -25,6 +25,7 @@ const archivos_para_cachear = [
   '/fonts/icomoon.woff',
 
   '/scripts/index.js',
+  '/scripts/main.js',
   '/scripts/sw_registration.js'
 ];
 
@@ -37,6 +38,7 @@ self.addEventListener('install', (event: any) => {
           console.log('Archivos cacheados');
         });
       })
+      .then(_ => self.skipWaiting())
   );
 });
 
@@ -60,7 +62,6 @@ self.addEventListener('activate', (event: any) => {
     })
   );
 });
-
 
 // Interceptor de solicitudes
 self.addEventListener('fetch', (event: any) => {
