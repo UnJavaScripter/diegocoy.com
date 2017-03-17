@@ -1,4 +1,30 @@
 [
+    {
+    "title": "Desarrollo web en 2017",
+    "event": {
+      "name": "Google - Launchpad Start 2017",
+      "url": "https://events.withgoogle.com/lp-start-bog-201703/startups/#content"
+    },
+    "date": "12/03/2017",
+    "description": "Let's talk about modern web development, Dos and don'ts ",
+    "location": {
+        "placeName": "Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia",
+        "geographical": {
+          "city": "Bogotá",
+          "country": "Colombia"
+        },
+      "coords": {
+        "lat": "4.5999972",
+        "lng": "-74.075135"
+      }
+    },
+    "resources": [
+      {
+        "name": "slides",
+        "url": "https://docs.google.com/presentation/d/1LP45xs0iWQWob0oZVNqESFe5q6dHr54XOJGfnx0II2o/edit?usp=sharing"
+      }
+    ]
+  },
   {
     "title": "Angular 1, 2, 3, 4, 5? It's just Angular",
     "event": {
