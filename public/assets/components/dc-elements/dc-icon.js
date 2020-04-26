@@ -2,7 +2,6 @@ class DCIcon extends HTMLElement {
     constructor() {
         super();
         const shadow = this.attachShadow({mode: 'open'});
-        const wrapper = document.createElement('span');
         const icon = document.createElement('span');
         
         const style = document.createElement('style');
@@ -16,13 +15,16 @@ class DCIcon extends HTMLElement {
         style.textContent = this.style();
         
         shadow.appendChild(style);
-        shadow.appendChild(wrapper);
-        wrapper.appendChild(icon);
+        shadow.appendChild(icon);
 
     }
 
     style () {
         return `
+            :host(:hover) [class^="dc-icon-"] {
+                color: ${this.iconColor};
+                filter: grayscale(0);
+            }
             [class^="dc-icon-"] {
                 /* use !important to prevent issues with browser extensions that change fonts */
                 font-family: 'icomoon' !important;
@@ -39,7 +41,10 @@ class DCIcon extends HTMLElement {
 
                 font-size: 5rem;
 
-                color: ${this.iconColor}
+                color: #444;
+
+                filter: grayscale(1);
+                transition: filter 0.5s, color 1s;
             }
             
             .dc-icon-file-text2:before {
