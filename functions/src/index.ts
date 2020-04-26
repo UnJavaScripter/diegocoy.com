@@ -39,7 +39,16 @@ app.get('/code', (req, res) => {
 });
 
 app.get('/samples', (req, res) => {
-  res.render('code-samples');
+  return request({
+    url: 'https://diegocoy-93a57.firebaseio.com/samples.json',
+    method: 'GET'
+  }, (err: Error, response: request.Response) => {
+    if(err) {
+      console.error(err);
+    }else {
+      res.render('code-samples', {samplesArr: JSON.parse(String(response.body))});
+    }
+  });
 });
 
 app.get('/experiments', (req, res) => {
@@ -48,7 +57,7 @@ app.get('/experiments', (req, res) => {
     method: 'GET'
   }, (err: Error, response: request.Response) => {
     if(err) {
-      console.log(err);
+      console.error(err);
     }else {
       res.render('code-experiments', {experimentsArr: JSON.parse(String(response.body))});
     }
@@ -61,7 +70,7 @@ app.get('/talks', (req, res) => {
       method: 'GET'
     }, (err: Error, response: request.Response) => {
       if(err) {
-        console.log(err);
+        console.error(err);
       }else {
         res.render('talks', {talksArr: JSON.parse(String(response.body))});
       }

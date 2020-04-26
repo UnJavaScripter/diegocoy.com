@@ -44,7 +44,7 @@ class DCIcon extends HTMLElement {
                 color: #444;
 
                 filter: grayscale(1);
-                transition: filter 0.5s, color 1s;
+                transition: filter 0.5s, color 0.4s;
             }
             
             .dc-icon-file-text2:before {
