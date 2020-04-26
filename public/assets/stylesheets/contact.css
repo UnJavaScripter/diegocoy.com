@@ -1,0 +1,51 @@
+/*
+    Chochal
+*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot');
+  src:  url('../fonts/icomoon.eot#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf') format('truetype'),
+  url('../fonts/icomoon.woff') format('woff'),
+  url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contact-card {
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
+
+.chochal {
+  width: 80%;
+}
+
+.chochal > ul.chochal-bubbles-list {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1;
+  flex-flow: wrap;
+  flex-direction: row;
+  width: auto;
+}
+
+.chochal > ul.chochal-bubbles-list > li {
+  flex: 1;
+  background: var(--color-white);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 3px;
+  border: 3px solid var(--color-gray-light);
+}
+
+.chochal > ul.chochal-bubbles-list > li a {
+  text-decoration: none;
+  padding: 0;
+}
+
+.chochal > ul.chochal-bubbles-list > li a .logo-label {
+  text-decoration: underline;
+}

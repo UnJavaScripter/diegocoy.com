@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.html', {description: 'Diego Coy, web developer'}); %>
+    <link rel="stylesheet" href="./assets/stylesheets/home.css" media="all">
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header.html', {currentPageName: 'home'}); %>
+    </header>
+
+    <main>
+        <article class="me-card">
+
+            <section class="me-info">
+                <div class="me-name">
+                    <h1>Diego Coy</h1>
+                    <h2>Web Developer</h2>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <%- include('../partials/bottom.html'); %>
+
+
+</body>
+
+</html>

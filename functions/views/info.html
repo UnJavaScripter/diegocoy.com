@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.html', {description: 'Who am I, you ask?'}); %>
+    <link rel="stylesheet" href="./assets/stylesheets/info.css" media="all">
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header.html', {currentPageName: 'info'}); %>
+    </header>
+
+    <article class="description-text">
+        <h2 class="title-floating">about:me</h2>
+        <div class="card">
+            <div class="text-left">
+                <p>Around 5 years ago I taught myself how to code because it seemed like fun. It is.</p>
+                <br>
+                <p>I help connect people who wants to share what they know with people who want to grab that knowledge
+                    by organizing
+                    several developer groups. I basically organize communities and code (for a living) in my spare time.
+                </p>
+                <br>
+                <p>As you can see my design skills are close to zero. I love coding in JavaScript.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="stuff-list-container">
+        <h2>Community Lead at</h2>
+        <div class="card">
+            <ul class="communities-list">
+                <li>
+                    <a href="https://www.meetup.com/gdgbogota/" rel="noopener noreferrer">
+                        <div class="community-logo-container">
+                            <picture>
+                                <source srcset="./assets/img/gdg-logo-200x200.webp" type="image/webp"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/gdg-logo-100x100.webp" type="image/webp">
+                                <source srcset="./assets/img/gdg-logo-200x200.jpg" type="image/jpeg"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/gdg-logo-100x100.jpg" type="image/jpeg">
+                                <img src="./assets/img/gdg-logo-200x200.jpg" alt="GDG Bogotá" title="GDG Bogotá">
+                            </picture>
+                        </div>
+                        <span class="logo-label">GDG Bogotá</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.meetup.com/wtm-bogota/" rel="noopener noreferrer">
+                        <div class="community-logo-container">
+                            <picture>
+                                <source srcset="./assets/img/wtm-logo-200x200.webp" type="image/webp"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/wtm-logo-100x100.webp" type="image/webp">
+                                <source srcset="./assets/img/wtm-logo-200x200.jpg" type="image/jpeg"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/wtm-logo-100x100.jpg" type="image/jpeg">
+                                <img src="./assets/img/wtm-logo-200x200.jpg" alt="WTM Bogotá" title="WTM Bogotá">
+                            </picture>
+                        </div>
+                        <span class="logo-label">WTM Bogotá</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.meetup.com/angular-colombia/" rel="noopener noreferrer">
+                        <div class="community-logo-container">
+                            <picture>
+                                <source srcset="./assets/img/angularco-logo-200x200.webp" type="image/webp"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/angularco-logo-100x100.webp" type="image/webp">
+                                <source srcset="./assets/img/angularco-logo-200x200.jpg" type="image/jpeg"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/angularco-logo-100x100.jpg" type="image/jpeg">
+                                <img src="./assets/img/angularco-logo-200x200.jpg" alt="Angular Colombia"
+                                    title="Angular Colombia">
+                            </picture>
+                        </div>
+                        <span class="logo-label">Angular Colombia</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/groups/devcbogota/" rel="noopener noreferrer">
+                        <div class="community-logo-container">
+                            <picture>
+                                <source srcset="./assets/img/devc-logo-200x200.webp" type="image/webp"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/devc-logo-100x100.webp" type="image/webp">
+                                <source srcset="./assets/img/devc-logo-200x200.jpg" type="image/jpeg"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/devc-logo-100x100.jpg" type="image/jpeg">
+                                <img src="./assets/img/devc-logo-200x200.jpg" alt="Facebook Developers Circle: Bogotá"
+                                    title="Facebook Developers Circle: Bogotá">
+                            </picture>
+                        </div>
+                        <span class="logo-label">Facebook Developers Circle: Bogotá</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </article>
+
+    <article class="stuff-list-container">
+        <h2>Recognitions</h2>
+        <div class="card">
+            <ul class="recognitions-list">
+                <li>
+                    <a href="https://developers.google.com/experts/people/diego-coy" rel="noopener noreferrer">
+                        <div class="recognitions-logo-container">
+                            <picture>
+                                <source srcset="./assets/img/gde-logo-200x200.webp" type="image/webp"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/gde-logo-100x100.webp" type="image/webp">
+                                <source srcset="./assets/img/gde-logo-200x200.jpg" type="image/jpeg"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/gde-logo-100x100.jpg" type="image/jpeg">
+                                <img src="./assets/img/gde-logo-200x200.jpg" alt="Google Developer Expert"
+                                    title="Google Developer Expert">
+                            </picture>
+                        </div>
+                        <span class="logo-label">GDE in Web Technologies</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://mvp.microsoft.com/en-us/PublicProfile/5002362?fullName=Diego%20Coy"
+                        rel="noopener noreferrer">
+                        <div class="skills-and-stuff-logo-container">
+                            <picture>
+                                <source srcset="./assets/img/mvp-logo-200x200.webp" type="image/webp"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/mvp-logo-100x100.webp" type="image/webp">
+                                <source srcset="./assets/img/mvp-logo-200x200.jpg" type="image/jpeg"
+                                    media="(min-width: 1000px)">
+                                <source srcset="./assets/img/mvp-logo-100x100.jpg" type="image/jpeg">
+                                <img src="./assets/img/mvp-logo-200x200.jpg" alt="Microsoft Most Valuable Professional"
+                                    title="Microsoft Most Valuable Professional">
+                            </picture>
+                        </div>
+                        <span class="logo-label">MVP in Visual Studio Developement Technologies</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </article>
+
+
+    <%- include('../partials/bottom.html'); %>
+
+</body>
+
+</html>

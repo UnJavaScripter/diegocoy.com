@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.html', {description: 'Ping me anytime'}); %>
+    <link rel="stylesheet" href="./assets/stylesheets/contact.css" media="all">
+    <style>
+        [class^="dc-icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            font-size: 5rem;
+
+            color: #333;
+        }
+
+        .dc-icon-file-text2:before {
+            content: "\e926";
+        }
+
+        .dc-icon-location2:before {
+            content: "\e948";
+        }
+
+        .dc-icon-list:before {
+            content: "\e9ba";
+        }
+
+        .dc-icon-link:before {
+            content: "\e9cb";
+        }
+
+        .dc-icon-cross:before {
+            content: "\ea0f";
+        }
+
+        .dc-icon-share:before {
+            content: "\ea7d";
+        }
+
+        .dc-icon-embed2:before {
+            content: "\ea80";
+        }
+
+        .dc-icon-terminal:before {
+            content: "\ea81";
+        }
+
+        .dc-icon-mail:before {
+            content: "\ea83";
+        }
+
+        .dc-icon-facebook:before {
+            content: "\ea91";
+        }
+
+        .dc-icon-twitter:before {
+            content: "\ea96";
+        }
+
+        .dc-icon-youtube:before {
+            content: "\ea9d";
+        }
+
+        .dc-icon-github:before {
+            content: "\eab0";
+        }
+
+        .dc-icon-linkedin:before {
+            content: "\eac9";
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header.html', {currentPageName: 'contact'}); %>
+    </header>
+
+    <h2 class="title-floating">Reach Out!</h2>
+
+    <article class="card contact-card">
+
+        <section class="chochal">
+            <div class="section-header">
+                <h3>Social Stuff</h3>
+            </div>
+            <ul class="chochal-bubbles-list">
+                <li>
+                    <a href="https://www.facebook.com/unjavascripter" rel="noopener noreferrer">
+                        <span>
+                            <span class="dc-icon-facebook" aria-label="facebook logo"></span>
+                        </span>
+                        <span class="logo-label">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/unjavascripter" rel="noopener noreferrer">
+                        <span>
+                            <span class="dc-icon-twitter" aria-label="facebook logo"></span>
+                        </span>
+                        <span class="logo-label">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/diegocoy/" rel="noopener noreferrer">
+                        <span>
+                            <span class="dc-icon-linkedin" aria-label="facebook logo"></span>
+                        </span>
+                        <span class="logo-label">LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCasVIAzmrcs1jmW2TTjrqfw" rel="noopener noreferrer">
+                        <span>
+                            <span class="dc-icon-youtube" aria-label="facebook logo"></span>
+                        </span>
+                        <span class="logo-label">YouTube</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/UnJavaScripter/" rel="noopener noreferrer">
+                        <span>
+                            <span class="dc-icon-github" aria-label="facebook logo"></span>
+                        </span>
+                        <span class="logo-label">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+
+    </article>
+
+    <%- include('../partials/bottom.html'); %>
+
+</body>
+
+</html>

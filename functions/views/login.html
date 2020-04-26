@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diego Coy</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f88b3b;
+            color: #3c1406;
+        }
+    </style>
+    <link rel="stylesheet" href="./assets/stylesheets/main.css" media="all">
+    <link rel="stylesheet" href="./assets/stylesheets/login.css" media="all">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="icon-192.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="msapplication-square70x70logo" content="icon-70.png">
+    <meta name="msapplication-square150x150logo" content="icon-150.png">
+    <meta name="msapplication-wide310x150logo" content="icon-310x150.png">
+    <meta name="theme-color" content="#f88b3b">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-links" role="menu">
+                <li role="none">
+                    <a href="/" role="menuitem">Home</a>
+                </li>
+                <li role="none">
+                    <a href="/info" role="menuitem">About Me</a>
+                </li>
+                <li role="none">
+                    <a href="/talks" role="menuitem">Talks</a>
+                </li>
+                <li role="none">
+                    <a href="/contact" role="menuitem">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="title-floating">Login</h2>
+
+    <section class="login-container">
+        <div class="login-button-element">
+            <button id="sign-in-button">
+                <span>
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google login">
+                </span>
+                <span class="text-label">
+                    Sign in with Google
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52103164-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-52103164-4');
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyDmS55HZ3-feKW34FXw-YZ5k13Jnc58NAM",
+            authDomain: "diegocoy-93a57.firebaseapp.com",
+            databaseURL: "https://diegocoy-93a57.firebaseio.com",
+            projectId: "diegocoy-93a57",
+            storageBucket: "diegocoy-93a57.appspot.com",
+            messagingSenderId: "136636593666"
+        };
+        firebase.initializeApp(config);
+
+        const provider = new firebase.auth.GoogleAuthProvider();
+        const logUserIn = async function () {
+            return firebase.auth().signInWithPopup(provider);
+        }
+
+        const signInButton = document.querySelector('#sign-in-button');
+        signInButton.addEventListener('mousedown', async () => {
+            const t = await logUserIn();
+            console.log(t)
+        })
+    </script>
+
+</body>
+
+</html>

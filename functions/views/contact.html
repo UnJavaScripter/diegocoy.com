@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.html', {description: 'Ping me anytime'}); %>
+    <link rel="stylesheet" href="./assets/stylesheets/contact.css" media="all">    
+    <script async src="./assets/components/dc-elements/dc-icon.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header.html', {currentPageName: 'contact'}); %>
+    </header>
+
+    <h2 class="title-floating">Reach Out!</h2>
+
+    <article class="card contact-card">
+
+        <section class="chochal">
+            <div class="section-header">
+                <h3>Social Stuff</h3>
+            </div>
+            <ul class="chochal-bubbles-list">
+                <li>
+                    <a href="https://www.facebook.com/unjavascripter" rel="noopener noreferrer">
+                        <dc-icon icon="facebook" icon-color="#333"></dc-icon>
+                        <span class="logo-label">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/unjavascripter" rel="noopener noreferrer">
+                        <dc-icon icon="twitter" icon-color="#333"></dc-icon>
+                        <span class="logo-label">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/diegocoy/" rel="noopener noreferrer">
+                        <dc-icon icon="linkedin" icon-color="#333"></dc-icon>
+                        <span class="logo-label">LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCasVIAzmrcs1jmW2TTjrqfw" rel="noopener noreferrer">
+                        <dc-icon icon="youtube" icon-color="#333"></dc-icon>
+                        <span class="logo-label">YouTube</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/UnJavaScripter/" rel="noopener noreferrer">
+                        <dc-icon icon="github" icon-color="#333"></dc-icon>
+                        <span class="logo-label">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+
+    </article>
+
+    <%- include('../partials/bottom.html'); %>
+    
+</body>
+
+</html>
