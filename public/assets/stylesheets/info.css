@@ -1,6 +1,10 @@
 .info-card {
   width: 60%;
   margin: auto;
+  font-size: 1.8rem;
+  padding: 0 7rem;
+  letter-spacing: 0.08rem;
+  font-weight: 300;
 }
 
 ul li {

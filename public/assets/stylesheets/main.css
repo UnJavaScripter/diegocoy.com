@@ -19,6 +19,7 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: var(--color-main);
   color: var(--color-white);
+  font-weight: 700;
 }
 
 h1,
