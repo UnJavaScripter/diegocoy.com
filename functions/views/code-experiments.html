@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.html', {description: 'Some of my past experiments'}); %>
+  <link rel="stylesheet" href="./assets/stylesheets/experiments.css" media="all">
+</head>
+
+<body>
+
+  <header>
+    <%- include('../partials/header.html', {currentPageName: 'experiments'}); %>
+  </header>
+
+  <h1 class="title-floating">Experiments</h1>
+
+  <section class="experiment-card-container">
+    <% if (experimentsArr.length) { %>
+      <% experimentsArr.forEach(function(experimentObj){ %>
+        <article class="experiment-card card">
+          <div class="experiment-meta">
+            <h2 class="experiment-title">
+              <%= experimentObj.name %>
+            </h2>
+            <div class="experiment-date">
+              <%= experimentObj.date %>
+            </div>
+            <div class="experiment-description">
+              <%= experimentObj.description %>
+            </div>
+            <div class="experiment-techs">
+              <% experimentObj.technologies.forEach(function(tech, index){ %>
+                <span class="experiment-media-elem">
+                  <%= tech %><% if (experimentObj.technologies.length !== (index + 1)) { %>,
+                  <% } %>
+                </span>
+              <% }); %>
+            </div>
+          </div>
+          <div class="experiment-url-container">
+            <ul class="unstyled experiment-url-list">
+              <li class="experiment-url-elem">
+                <a href="<%= experimentObj.repo %>" rel="noopener noreferrer">repo</a>
+              </li>
+              <li class="experiment-url-elem">
+                <a href="<%= experimentObj.demo %>" rel="noopener noreferrer">demo</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      <% }); %>
+    <% } %>
+  </section>
+
+  <%- include('../partials/bottom.html'); %>
+
+</body>
+
+</html>

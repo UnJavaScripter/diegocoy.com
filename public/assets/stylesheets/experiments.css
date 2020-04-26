@@ -1,0 +1,64 @@
+.experiment-card-container {
+  width: 60%;
+  margin: auto;
+}
+
+.experiment-card {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 3rem 1rem;
+}
+
+.experiment-meta {
+  width: 80%;
+  text-align: start;
+}
+
+.experiment-title {
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
+
+.experiment-date {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.experiment-description {
+  margin-top: 1rem;
+  font-weight: normal;
+}
+
+.experiment-techs {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.experiment-url-container {
+  width: 30%;
+  text-align: start;
+  font-size: 1.2rem;
+}
+
+.experiment-url-container ul {
+  display: flex;
+  flex-direction: row;
+  text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .experiment-card-container {
+    width: auto;
+  }
+  .experiment-media-container {
+      text-align: end;
+  }
+  
+  .experiment-media-container>ul {
+      flex-direction: column;
+  }
+}
