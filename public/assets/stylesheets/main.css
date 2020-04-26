@@ -3,9 +3,10 @@
 
   --color-white: #fbf3ea;
   --color-gray-light: #dcdcdc;
-  --color-black: #062e3c;
+  --color-black: #212f40;
 
-  --color-link: #265992;
+  --color-link: #3b4af8;
+  --color-nav-link: #f5f8ff;
 
   --color-accent: #08df63;
   --color-accent-lighter: #37e681;
@@ -18,17 +19,6 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: var(--color-main);
   color: var(--color-white);
-  background-attachment: fixed;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    background-position-x: 50%;
-  }
-
-  h1 {
-    font-size: 5rem;
-  }
 }
 
 h1,
@@ -42,22 +32,27 @@ p {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 7rem;
   letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 480px) {
   h1 {
-    letter-spacing: 0.05em;
+    font-size: 6rem;
   }
 }
+
 
 ul {
   padding: 0;
 }
 
-li {
+ul.unstyled li {
   list-style: none;
+}
+
+li>ul {
+  margin-left: 2rem;
 }
 
 a {
@@ -87,6 +82,7 @@ a:active {
   color: var(--color-black);
   font-size: 4em;
   overflow-wrap: break-word;
+  margin: 4rem 0 6rem 0;
 }
 
 .card {
@@ -126,11 +122,13 @@ nav li a {
   text-decoration: none;
   font-size: 1.3rem;
   border-radius: 3px;
+  color: var(--color-nav-link);
 }
 
 nav a:hover,
 li.active a {
-  background-color: rgba(249, 249, 249, 0.48);
+  background-color: var(--color-accent);
+  color: var(--color-text-white);
 }
 
 nav a:focus,
