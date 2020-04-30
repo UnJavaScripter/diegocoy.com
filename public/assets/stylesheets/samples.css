@@ -49,16 +49,29 @@
   text-transform: capitalize;
 }
 
-
 @media screen and (max-width: 1024px) {
   .sample-card-container {
     width: auto;
   }
   .sample-media-container {
-      text-align: end;
+    text-align: end;
   }
-  
-  .sample-media-container>ul {
-      flex-direction: column;
+
+  .sample-media-container > ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .sample-card {
+    margin: 1.5rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sample-url-container {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
   }
 }

@@ -10,3 +10,14 @@
 ul li {
   margin-top: 2rem;
 }
+
+@media screen and (max-width: 640px) {
+  .info-card {
+    width: auto;
+    margin: 0;
+    font-size: 1.8rem;
+    padding: 0 2.5rem;
+    letter-spacing: 0.08rem;
+    font-weight: 300;
+  }
+}
