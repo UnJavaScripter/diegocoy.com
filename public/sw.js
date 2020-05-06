@@ -1,4 +1,4 @@
-let CACHE_ACTUAL = 'cache3';
+let CACHE_ACTUAL = 'cache4';
 let archivos_para_cachear = [
   './icon-512.png',
   './icon-310.png',
@@ -24,14 +24,7 @@ let archivos_para_cachear = [
   './assets/stylesheets/samples.css',
   './assets/stylesheets/experiments.css',
 
-  './assets/img/me-800w-100x100.webp',
-  './assets/img/me-800w.webp',
-  './assets/img/me-800w.jpg',
-
-  './assets/fonts/icomoon.eot',
-  './assets/fonts/icomoon.svg',
-  './assets/fonts/icomoon.ttf',
-  './assets/fonts/icomoon.woff',
+  './assets/components/dc-elements/dc-icon.js',
 
   './index.js'
 ]
