@@ -24,7 +24,8 @@ class DCIcon extends HTMLElement {
       :host(:hover) {
         cursor: pointer;
       }
-      :host(:hover) #s2 {
+      :host(:hover) #s2 ,
+      :focus #s2 {
         opacity: 1;
         clip-path: circle(120% at bottom);
         fill: ${iconColor};
