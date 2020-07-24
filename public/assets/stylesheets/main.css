@@ -1,18 +1,3 @@
-:root {
-  --color-main: #3ba8f8;
-  --color-secondary: #3b79a7;
-
-  --color-white: #fbf3ea;
-  --color-gray-light: #dcdcdc;
-  --color-black: #212f40;
-
-  --color-link: #3b4af8;
-  --color-nav-link: #f5f8ff;
-
-  --color-accent: #08df63;
-  --color-accent-lighter: #37e681;
-}
-
 /* Global Overwrittes */
 
 body {
