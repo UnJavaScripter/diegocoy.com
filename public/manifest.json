@@ -17,5 +17,31 @@
   "background_color": "#cd853f",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#3ba8f8"
+  "theme_color": "#3ba8f8",
+  "shortcuts": [
+    {
+      "name": "Experiments",
+      "short_name": "Experiments",
+      "url": "/experiments?shortcut",
+      "icons": [
+        {
+          "src": "/icon-512-light-blue.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Code Samples",
+      "short_name": "Samples",
+      "url": "/samples?shortcut",
+      "icons": [
+        {
+          "src": "/icon-512-light-green.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
 }
