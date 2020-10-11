@@ -1,4 +1,4 @@
-let CACHE_ACTUAL = 'cache4';
+let CACHE_ACTUAL = 'cache5';
 let archivos_para_cachear = [
   './icon-512.png',
   './icon-310.png',

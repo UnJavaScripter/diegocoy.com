@@ -17,7 +17,6 @@
   justify-content: space-around;
   align-items: center;
   padding: 0.5rem 0.8rem;
-  box-shadow: var(--card-box-shadow);
   cursor: pointer;
 }
 

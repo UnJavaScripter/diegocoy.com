@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Sora', sans-serif;
   background-color: var(--color-main);
   color: var(--color-white);
   font-weight: 700;
@@ -70,7 +70,7 @@ a:active {
 
 .title-floating {
   text-align: center;
-  color: var(--color-black);
+  color: var(--color-secondary);
   font-size: 4rem;
   font-size: calc(100% + 8vmin);
   overflow-wrap: break-word;
@@ -89,7 +89,6 @@ a:active {
   padding: 1.8rem 2rem;
   flex-flow: column;
   border-radius: 3px;
-  box-shadow: 2px 2px 3px 1px rgba(80, 58, 34, 0.36);
 }
 
 /*
@@ -99,6 +98,7 @@ a:active {
 nav {
   display: flex;
   justify-content: flex-end;
+  height: var(--nav-height);
 }
 
 nav ul {
@@ -115,7 +115,7 @@ nav a:visited {
   text-decoration: none;
   font-size: 1.3rem;
   border-radius: 3px;
-  color: var(--color-nav-link);
+  color: var(--color-white);
   text-align: center;
   display: flex;
   height: auto;
@@ -125,28 +125,27 @@ nav a:visited {
 nav a:hover,
 li.active a {
   background-color: var(--color-accent);
-  color: var(--color-text-white);
+  color: var(--color-black);
 }
 
 nav a:focus,
 nav a:active {
   background-color: var(--color-accent-lighter);
   outline-color: var(--color-accent);
-  text-decoration: var(--color-text-white) underline;
-  color: var(--color-text-white);
+  text-decoration: var(--color-text-dark) underline;
+  color: var(--color-text-dark);
   border-radius: 5px;
 }
 
 @media screen and (max-width: 760px) {
   nav {
     justify-content: start;
-    box-shadow: inset -2px 1px 12px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    background: var(--color-secondary);
   }
 
   nav .nav-links {
-    flex-direction: column;
-    width: 90%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   nav .nav-links a {
@@ -156,8 +155,8 @@ nav a:active {
   nav a:hover {
     background-color: var(--color-accent-lighter);
     outline-color: var(--color-accent);
-    text-decoration: var(--color-text-white) underline;
-    color: var(--color-text-white);
+    text-decoration: var(--color-text-dark) underline;
+    color: var(--color-text-dark);
     border-radius: 5px;
   }
 }

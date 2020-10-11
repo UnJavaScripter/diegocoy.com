@@ -14,10 +14,10 @@
     }
   ],
   "start_url": "/?o=i",
-  "background_color": "#cd853f",
+  "background_color": "#010203",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#3ba8f8",
+  "theme_color": "#005a52",
   "shortcuts": [
     {
       "name": "Experiments",
