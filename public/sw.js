@@ -1,4 +1,4 @@
-let CACHE_ACTUAL = 'cache5';
+let CACHE_ACTUAL = 'cache2';
 let archivos_para_cachear = [
   './icon-512.png',
   './icon-310.png',
@@ -27,7 +27,7 @@ let archivos_para_cachear = [
   './assets/components/dc-elements/dc-icon.js',
 
   './index.js'
-]
+];
 
 // Instalación del service worker y cacheo inicial
 self.addEventListener('install', (event) => {

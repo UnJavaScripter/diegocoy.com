@@ -22,6 +22,11 @@ h1 {
   font-size: 7rem;
   letter-spacing: 0.05em;
 }
+
+.me-subtitle {
+  letter-spacing: 0.6rem;
+}
+
 .subtitle {
   text-align: center;
   padding: 2rem 1rem;
@@ -29,7 +34,11 @@ h1 {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+
+  .me-name h1 {
+    font-size: 5rem;
   }
 }
 
@@ -115,7 +124,7 @@ nav a:visited {
   text-decoration: none;
   font-size: 1.3rem;
   border-radius: 3px;
-  color: var(--color-white);
+  color: var(--color-white-darker);
   text-align: center;
   display: flex;
   height: auto;
