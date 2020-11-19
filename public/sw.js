@@ -1,7 +1,6 @@
 let CACHE_ACTUAL = 'cache2';
 let archivos_para_cachear = [
   './icon-512.png',
-  './icon-310.png',
   './icon-192.png',
 
   './icon-70.png',
