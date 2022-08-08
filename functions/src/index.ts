@@ -30,10 +30,6 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/info', (req, res) => {
-  res.render('info');
-});
-
 app.get('/code', (req, res) => {
   res.render('code');
 });
@@ -64,26 +60,8 @@ app.get('/experiments', (req, res) => {
   });
 });
 
-app.get('/talks', (req, res) => {
-  return request({
-      url: 'https://diegocoy-93a57.firebaseio.com/talks.json',
-      method: 'GET'
-    }, (err: Error, response: request.Response) => {
-      if(err) {
-        console.error(err);
-      }else {
-        res.render('talks', {talksArr: JSON.parse(String(response.body))});
-      }
-    });
-});
-
 app.get('/contact', (req, res) => {
-  const userAgent = req.headers['user-agent']?.toString();
-  if (userAgent && /trident|edge/igu.test(userAgent)) {
-    res.render('contact-lame');
-  }else {
-    res.render('contact');
-  }
+  res.render('contact');
 });
 
 app.get('/login', (req, res) => {
