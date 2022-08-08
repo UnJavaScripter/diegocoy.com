@@ -17,7 +17,10 @@
       "**/node_modules/**"
     ],
     "rewrites": [
-      {"source": "**", "function": "main"}
+      {
+        "source": "**",
+        "function": "main"
+      }
     ]
   },
   "emulators": {
