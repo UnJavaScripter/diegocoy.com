@@ -29,5 +29,7 @@ module.exports = {
 		"import/no-unresolved": 0,
 		"no-tabs": 0,
 		"indent": ["error", "tab"],
+		"semi": "off",
+		"linebreak-style": "off",
 	},
 };

@@ -36,8 +36,10 @@ app.get("/contact", (req, res) => {
 	res.render("contact")
 })
 
-if (process.env.DEV  === "true") {
-	app.listen(8088, () => {console.log("8088: Listening")})
+if (process.env.DEV === "true") {
+	app.listen(8088, () => {
+		console.log("8088: Listening")
+	})
 }
 
 export const main = functions.https.onRequest(app)
