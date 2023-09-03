@@ -1,16 +1,19 @@
-let CACHE_ACTUAL = 'cache3';
+let CACHE_ACTUAL = 'cache0';
 let archivos_para_cachear = [
-  'icons/android/android-launchericon-512-512.png',
-  'icons/android/android-launchericon-192-192.png',
-
   '/',
+  '/contact',
 
+  
   './assets/stylesheets/main.css',
   './assets/stylesheets/home.css',
-
+  './assets/stylesheets/contact.css',
+  
   './assets/components/dc-elements/dc-icon.js',
-
-  './index.js'
+  
+  './index.js',
+  
+  'icons/android/android-launchericon-512-512.png',
+  'icons/android/android-launchericon-192-192.png',
 ];
 
 // Instalación del service worker y cacheo inicial
