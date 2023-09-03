@@ -5,7 +5,7 @@
   <style>
     .me-info {
       margin: 0 auto;
-      min-height: calc(100vh - var(--nav-height));
+      min-height: calc(100dvh - var(--nav-height));
       display: flex;
       justify-content: center;
       align-items: center;
@@ -19,8 +19,9 @@
       font-size: 7rem;
       letter-spacing: 0.05em;
     }
+
   </style>
-  <%- include('../partials/head.html', {description: 'Diego Coy, web developer'}); %>
+  <%- include('../partials/head.html', {description: 'Diego Coy, Developer Advocate'}); %>
   <link rel="stylesheet" href="./assets/stylesheets/home.css" media="all">
 </head>
 
@@ -35,7 +36,7 @@
       <section class="me-info">
         <div class="me-name">
           <h1>Diego Coy</h1>
-          <h2 class="me-subtitle">Developer Advocate | Web Developer</h2>
+          <h2 class="me-subtitle">Developer Advocate</h2>
         </div>
       </section>
     </article>
@@ -51,13 +52,14 @@
         "@type": "Country",
         "name": "Colombia"
       },
-      "jobTitle": "Developer Advocate | Web Developer",
+      "jobTitle": "Developer Advocate and Web Developer",
       "homeLocation": {
         "@type": "Place",
-        "name": "Amstedam, the Netherlands"
+        "name": "Portugal"
       },
       "award": [
-        "Google Developer Expert",
+        "Google Developer Expert in Web Technologies",
+        "Google Developer Expert in Google Maps Platform",
         "Google for Startups mentor"
       ] 
     }
@@ -65,7 +67,23 @@
 
   <%- include('../partials/bottom.html'); %>
 
-
+  <script>
+    navigation.addEventListener("navigate", (e) => {
+      const shouldNavigateTag = "ok-go-for-real-this-time"
+      if (e.info !== shouldNavigateTag) {
+        e.preventDefault()
+        
+        console.log("Navegando");
+        console.log(e);
+        document.startViewTransition();
+        const transition = document.startViewTransition();
+        // Wait for the pseudo-elements to be created:
+        transition.finished.then(() => {
+          navigation.navigate(e.destination.url, {info: shouldNavigateTag})
+        })
+      }
+    })
+  </script>
 </body>
 
 </html>

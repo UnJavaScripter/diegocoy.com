@@ -11,27 +11,27 @@
     "logs": "firebase functions:log"
   },
   "engines": {
-    "node": "16"
+    "node": "18"
   },
   "main": "lib/index.js",
   "dependencies": {
     "compression": "^1.7.4",
-    "ejs": "^3.1.8",
-    "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.18.0",
+    "ejs": "^3.1.9",
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^4.4.1",
     "request": "^2.88.2"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",
-    "@types/ejs": "^3.1.1",
+    "@types/ejs": "^3.1.2",
     "@types/request": "^2.48.8",
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "eslint": "^8.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "eslint": "^8.48.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.25.4",
-    "firebase-functions-test": "^0.2.0",
-    "typescript": "^4.5.4"
+    "eslint-plugin-import": "^2.28.1",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^5.2.2"
   },
   "private": true
 }

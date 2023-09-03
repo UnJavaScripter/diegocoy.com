@@ -8,9 +8,9 @@ if('serviceWorker' in navigator) {
       
         if (installingWorker.state === 'installed') {
           if (navigator.serviceWorker.controller) {
-            console.log('El contenido del sitio se ha actualizado, verás la nueva versión tras refrescar la página');
+            console.log('Content updated. The new version will be available after refreshing the page.');
           } else {
-            console.log('Sitio \'cacheado\' ¡Visitas offline activadas!');
+            console.log('Content cached. Offline mode available.');
           }
         }
         
@@ -18,10 +18,10 @@ if('serviceWorker' in navigator) {
     };
 
   }).catch(err => {
-    console.warn(':( Algo pasó durante el registro del Service Worker: ', err);
+    console.warn('Service worker registration failed: ', err);
   });
 
   navigator.serviceWorker.ready.then(serviceWorkerRegistration => {
-    console.log('El Service Worker está listo :D');
+    console.log('Service worker ready.');
   })
 }

@@ -1,27 +1,12 @@
-let CACHE_ACTUAL = 'cache2';
+let CACHE_ACTUAL = 'cache3';
 let archivos_para_cachear = [
-  './icon-512.png',
-  './icon-192.png',
-
-  './icon-70.png',
-  './icon-150.png',
-  './icon-310x150.png',
+  'icons/android/android-launchericon-512-512.png',
+  'icons/android/android-launchericon-192-192.png',
 
   '/',
 
-  '/info',
-  '/experiments',
-  '/samples',
-  '/talks',
-  '/contact',
-
-  './assets/stylesheets/contact.css',
-  './assets/stylesheets/home.css',
-  './assets/stylesheets/info.css',
   './assets/stylesheets/main.css',
-  './assets/stylesheets/talks.css',
-  './assets/stylesheets/samples.css',
-  './assets/stylesheets/experiments.css',
+  './assets/stylesheets/home.css',
 
   './assets/components/dc-elements/dc-icon.js',
 
@@ -34,7 +19,7 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_ACTUAL)
       .then((cache) => {
         return cache.addAll(archivos_para_cachear).then(() => {
-          console.log('Archivos cacheados');
+          console.log('Cached all required files.');
         });
       })
       .then(_ => self.skipWaiting())
@@ -53,7 +38,7 @@ self.addEventListener('activate', (event) => {
         lasCachesQueExisten.map(unaCache => {
           if (unaCache !== CACHE_ACTUAL) {
             return caches.delete(unaCache).then(() => {
-              console.log('Cachés previas eliminadas');
+              console.log('Old caches gone!');
               self.skipWaiting();
             });
           }
